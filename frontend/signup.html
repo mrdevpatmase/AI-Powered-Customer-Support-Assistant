@@ -3,104 +3,108 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sign Up</title>
+    <title>Sign Up</title>
 
-<link rel="stylesheet" href="css/signup.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/signup.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="container">
+    <!-- Home Button -->
+    <a href="index.html" class="home-btn">
+        <i class="fa-solid fa-house"></i> Home
+    </a>
 
-<div class="left">
+    <div class="container">
 
-<i class="fa-solid fa-headset logo"></i>
+        <!-- Left Side -->
+        <div class="left">
 
-<h1>AI Customer Support Assistant</h1>
+            <i class="fa-solid fa-headset logo"></i>
 
-<p>
+            <h1>AI Customer Support Assistant</h1>
 
-Create an account and start chatting with our AI powered support assistant.
+            <p>
+                Create an account and start chatting with our AI-powered support assistant.
+            </p>
 
-</p>
+        </div>
 
-</div>
+        <!-- Right Side -->
+        <div class="right">
 
-<div class="right">
+            <form id="signupForm">
 
-<form id="signupForm">
+                <h2>Create Account</h2>
 
-<h2>Create Account</h2>
+                <div class="input-group">
 
-<div class="input-group">
+                    <label>Name</label>
 
-<label>Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
 
-<input
-type="text"
-id="name"
-placeholder="Enter your name"
-required>
+                </div>
 
-</div>
+                <div class="input-group">
 
-<div class="input-group">
+                    <label>Email</label>
 
-<label>Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
 
-<input
-type="email"
-id="email"
-placeholder="Enter your email"
-required>
+                </div>
 
-</div>
+                <div class="input-group">
 
-<div class="input-group">
+                    <label>Password</label>
 
-<label>Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter password"
+                        required>
 
-<input
-type="password"
-id="password"
-placeholder="Enter password"
-required>
+                </div>
 
-</div>
+                <button type="submit">
+                    Create Account
+                </button>
 
-<button type="submit">
+                <p class="bottom">
 
-Create Account
+                    Already have an account?
 
-</button>
+                    <a href="login.html">
+                        Login
+                    </a>
 
-<p class="bottom">
+                </p>
 
-Already have an account?
+            </form>
 
-<a href="login.html">
+        </div>
 
-Login
+    </div>
 
-</a>
-
-</p>
-
-</form>
-
-</div>
-
-</div>
-
-<script src="js/api.js"></script>
-<script src="js/signup.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/signup.js"></script>
 
 </body>
 

@@ -212,7 +212,9 @@ function filterHistory() {
 
             category === "" ||
 
-            chat.category === category;
+            chat.category === category ||
+
+            chat.priority === category;
 
         return matchSearch && matchCategory;
 

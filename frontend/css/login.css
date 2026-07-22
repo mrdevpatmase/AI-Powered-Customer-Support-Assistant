@@ -530,3 +530,54 @@ button{
 }
 
 }
+/* ==========================
+   Home Button
+========================== */
+
+body{
+    position: relative;
+}
+
+.home-btn{
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 22px;
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border: 2px solid #2563eb;
+
+    border-radius: 10px;
+
+    transition: all .3s ease;
+
+    z-index: 1000;
+
+}
+
+.home-btn:hover{
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
