@@ -1,12 +1,15 @@
 from flask import Blueprint, request, jsonify
 
 from middleware.auth_middleware import token_required
-
 from services.embedding_service import create_query_embedding
 from services.search_service import search
 from services.llm_service import ask_llm
 
+from models.chat_history import ChatHistory
+from database.db import db
+
 chat = Blueprint("chat", __name__)
+
 
 
 @chat.route("/ask", methods=["POST"])
@@ -21,8 +24,19 @@ def ask():
 
     context = "\n\n".join(chunks)
 
-    answer = ask_llm(context, question)
+    result = ask_llm(context, question)
 
-    return jsonify({
-        "response": answer
-    })
+    # Save conversation
+    history = ChatHistory(
+        user_id=request.user["id"],
+        question=question,
+        answer=result["answer"],
+        category=result["category"],
+        priority=result["priority"],
+        confidence=result["confidence"]
+    )
+
+    db.session.add(history)
+    db.session.commit()
+
+    return jsonify(result)

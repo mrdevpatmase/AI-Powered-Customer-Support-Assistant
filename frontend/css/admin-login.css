@@ -1,0 +1,204 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#eff6ff,#dbeafe,#ffffff);
+
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.form-box{
+
+    width:420px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:45px 35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+    text-align:center;
+
+}
+
+.icon{
+
+    width:85px;
+    height:85px;
+
+    margin:auto;
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-size:36px;
+
+}
+
+h1{
+
+    color:#1e293b;
+
+    margin-bottom:10px;
+
+}
+
+p{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    margin-bottom:30px;
+
+    line-height:1.5;
+
+}
+
+.input-group{
+
+    position:relative;
+
+    margin-bottom:20px;
+
+}
+
+.input-group i{
+
+    position:absolute;
+
+    left:16px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#64748b;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:14px 18px 14px 48px;
+
+    border:1px solid #dbeafe;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.input-group input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.bottom-link{
+
+    margin-top:18px;
+
+}
+
+.bottom-link a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.bottom-link a:hover{
+
+    color:#1d4ed8;
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:480px){
+
+    .form-box{
+
+        width:100%;
+
+        padding:35px 25px;
+
+    }
+
+}

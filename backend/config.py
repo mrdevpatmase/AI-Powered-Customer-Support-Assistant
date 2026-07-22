@@ -8,5 +8,10 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    SQLALCHEMY_ENGINE_OPTIONS = {
+        "pool_pre_ping": True,
+        "pool_recycle": 300,
+    }
+
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
     JINA_API_KEY = os.getenv("JINA_API_KEY")

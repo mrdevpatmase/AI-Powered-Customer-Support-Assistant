@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | AI Customer Support</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+    <script defer src="js/admin.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>AI Support Admin</h2>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <h1 class="title">Admin Dashboard</h1>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+
+            <div class="card">
+                <h3>Total Users</h3>
+                <p id="totalUsers">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Queries</h3>
+                <p id="totalQueries">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Shipping</h3>
+                <p id="shipping">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Refund</h3>
+                <p id="refund">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Payment</h3>
+                <p id="payment">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Orders</h3>
+                <p id="orders">0</p>
+            </div>
+
+        </div>
+
+        <!-- Filters -->
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search user, email or question..."
+            >
+
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="Shipping">Shipping</option>
+                <option value="Refund">Refund</option>
+                <option value="Payment">Payment</option>
+                <option value="Orders">Orders</option>
+            </select>
+
+        </div>
+
+        <!-- Chat History -->
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Question</th>
+                        <th>Category</th>
+                        <th>Priority</th>
+                        <th>Confidence</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyTable">
+
+                    <!-- Filled dynamically -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

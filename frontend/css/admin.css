@@ -1,0 +1,397 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f9ff;
+    color:#1e293b;
+    min-height:100vh;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    width:100%;
+    height:70px;
+    padding:0 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#fff;
+
+    border-bottom:1px solid #e5e7eb;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.logo h2{
+    color:#2563eb;
+    font-size:28px;
+    font-weight:700;
+}
+
+.logout-btn{
+
+    background:#ef4444;
+    color:#fff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.logout-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(239,68,68,.25);
+
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+
+    width:95%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:25px 0;
+
+}
+
+.title{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    color:#1e293b;
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    min-height:120px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#2563eb;
+
+    box-shadow:0 12px 25px rgba(37,99,235,.12);
+
+}
+
+.card h3{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+/* ===========================
+   Toolbar
+=========================== */
+
+.toolbar{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.toolbar input{
+
+    flex:1;
+
+    min-width:260px;
+
+    padding:14px 18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    color:#1e293b;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.toolbar input:focus{
+
+    border-color:#2563eb;
+
+}
+
+.toolbar select{
+
+    width:220px;
+
+    padding:14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    color:#1e293b;
+
+    cursor:pointer;
+
+    outline:none;
+
+}
+
+/* ===========================
+   Table
+=========================== */
+
+.table-container{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    border:1px solid #e5e7eb;
+
+    overflow-x:auto;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:1100px;
+
+}
+
+thead{
+
+    background:#2563eb;
+
+}
+
+thead th{
+
+    color:#fff;
+
+    padding:16px;
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+tbody td{
+
+    padding:15px 16px;
+
+    color:#334155;
+
+    border-top:1px solid #eef2f7;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/* ===========================
+   Badges
+=========================== */
+
+.badge{
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.high{
+
+    background:#ef4444;
+
+    color:white;
+
+}
+
+.medium{
+
+    background:#f59e0b;
+
+    color:white;
+
+}
+
+.low{
+
+    background:#10b981;
+
+    color:white;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        padding:0 20px;
+
+    }
+
+    .title{
+
+        font-size:32px;
+
+    }
+
+    .card p{
+
+        font-size:30px;
+
+    }
+
+    .toolbar{
+
+        flex-direction:column;
+
+    }
+
+    .toolbar input,
+    .toolbar select{
+
+        width:100%;
+
+    }
+
+}
