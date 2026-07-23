@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from sqlalchemy import func
-
+from zoneinfo import ZoneInfo
 from backend.database.db import db
 from backend.models.chat_history import ChatHistory
 from backend.models.user import User
@@ -50,25 +50,23 @@ def history():
 
         user = User.query.get(chat.user_id)
 
+        ist_time = (
+            chat.created_at
+            .replace(tzinfo=ZoneInfo("UTC"))
+            .astimezone(ZoneInfo("Asia/Kolkata"))
+        )
+
         data.append({
 
             "id": chat.id,
-
             "user": user.name,
-
             "email": user.email,
-
             "question": chat.question,
-
             "answer": chat.answer,
-
             "category": chat.category,
-
             "priority": chat.priority,
-
             "confidence": chat.confidence,
-
-            "created_at": chat.created_at.strftime("%d-%m-%Y %H:%M")
+            "created_at": ist_time.strftime("%d-%m-%Y %H:%M")
 
         })
 

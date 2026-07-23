@@ -58,9 +58,6 @@ async function sendMessage() {
 
         const token = localStorage.getItem("token");
 
-//         const token =
-// "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkRldiIsInJvbGUiOiJjdXN0b21lciIsImV4cCI6MTc4NDczNTQ4OH0.zEC9qp2PCjbtme7Hage86L4_MzeXi_ykLUhEiBIBWR0";
-
         const response = await fetch(`${API_BASE_URL}/api/chat/ask`, {
 
             method: "POST",
