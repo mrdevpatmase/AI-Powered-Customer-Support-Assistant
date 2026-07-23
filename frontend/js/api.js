@@ -1,3 +1,3 @@
 // Backend Base URL
 
-const API_BASE_URL = "http://127.0.0.1:5000";
+const API_BASE_URL = "https://ai-powered-customer-support-assistant-evsu.onrender.com";
