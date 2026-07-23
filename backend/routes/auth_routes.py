@@ -17,10 +17,29 @@ def signup():
 
     data = request.get_json()
 
-    name = data.get("name")
-    email = data.get("email")
-    password = data.get("password")
+    name = data.get("name", "").strip()
+    email = data.get("email", "").strip().lower()
+    password = data.get("password", "").strip()
 
+    # Required fields
+    if not name:
+        return jsonify({"message": "Name is required"}), 400
+
+    if not email:
+        return jsonify({"message": "Email is required"}), 400
+
+    if not password:
+        return jsonify({"message": "Password is required"}), 400
+
+    # Name length
+    if len(name) < 2:
+        return jsonify({"message": "Name must be at least 2 characters"}), 400
+
+    # Password length
+    if len(password) < 6:
+        return jsonify({"message": "Password must be at least 6 characters"}), 400
+
+    # Duplicate email
     if User.query.filter_by(email=email).first():
         return jsonify({"message": "Email already exists"}), 400
 
@@ -38,7 +57,7 @@ def signup():
     db.session.add(user)
     db.session.commit()
 
-    return jsonify({"message": "User Created Successfully"})
+    return jsonify({"message": "User Created Successfully"}), 201
 
 @auth.route("/login", methods=["POST"])
 def login():
