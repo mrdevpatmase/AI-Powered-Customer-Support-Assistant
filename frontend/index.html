@@ -7,15 +7,12 @@
 
     <title>AI Customer Support Assistant</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/chat.css">
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -26,38 +23,37 @@
 
     <nav class="navbar">
 
-<div class="logo">
-    <i class="fa-solid fa-headset"></i>
-    <span>AI Support</span>
-</div>
+        <div class="logo">
+            <i class="fa-solid fa-headset"></i>
+            <span>AI Support</span>
+        </div>
 
-<div id="welcomeUser" class="welcome-user"></div>
+        <div id="welcomeUser" class="welcome-user"></div>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#about">About</a></li>
         </ul>
 
-<div class="nav-actions">
+        <div class="nav-actions">
 
-    <a href="login.html" class="login-btn customer-login">
-        <i class="fa-solid fa-user"></i>
-        Customer Login
-    </a>
+            <a href="login.html" class="login-btn customer-login">
+                <i class="fa-solid fa-user"></i>
+                Customer Login
+            </a>
 
-    <a href="admin-login.html" class="admin-btn">
-        <i class="fa-solid fa-user-shield"></i>
-        Admin Login
-    </a>
+            <a href="admin-login.html" class="admin-btn">
+                <i class="fa-solid fa-user-shield"></i>
+                Admin Login
+            </a>
 
-<button id="logoutBtn">
-    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-    Logout
-</button>
+            <button id="logoutBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+            </button>
 
-</div>
-
+        </div>
 
     </nav>
 
@@ -79,25 +75,17 @@
             <p>
                 Resolve customer queries instantly using AI-powered semantic
                 search and large language models. Get fast, reliable assistance
-                for orders, refunds, payments, shipping, returns and more.
+                for orders, refunds, payments, shipping, returns, and more.
             </p>
 
-<div class="hero-buttons">
+            <div class="hero-buttons">
 
-<button type="button" class="hero-btn">
-    <i class="fa-solid fa-comments"></i>
-    Start Chat
-</button>
+                <button type="button" class="hero-btn">
+                    <i class="fa-solid fa-comments"></i>
+                    Start Chat
+                </button>
 
-    <a href="admin-login.html" class="secondary-btn">
-
-        <i class="fa-solid fa-user-shield"></i>
-
-        Admin Login
-
-    </a>
-
-</div>
+            </div>
 
             <div class="hero-stats">
 
@@ -125,34 +113,23 @@
             <div class="ai-card">
 
                 <div class="ai-icon">
-
                     <i class="fa-solid fa-robot"></i>
-
                 </div>
 
                 <h2>AI Assistant</h2>
 
-                <p>
-
-                    Ask questions about:
-
-                </p>
+                <p>Ask questions about:</p>
 
                 <div class="quick-tags">
-
                     <span>📦 Orders</span>
                     <span>🚚 Shipping</span>
                     <span>💳 Payments</span>
                     <span>💰 Refunds</span>
-
                 </div>
 
                 <div class="online-status">
-
                     <span class="status-dot"></span>
-
                     Online & Ready
-
                 </div>
 
             </div>
@@ -166,59 +143,35 @@
     <section class="features" id="features">
 
         <div class="card">
-
             <div class="icon-circle">
                 <i class="fa-solid fa-truck-fast"></i>
             </div>
-
             <h3>Shipping</h3>
-
-            <p>
-                Track deliveries and shipping updates instantly.
-            </p>
-
+            <p>Track deliveries and shipping updates instantly.</p>
         </div>
 
         <div class="card">
-
             <div class="icon-circle">
                 <i class="fa-solid fa-box"></i>
             </div>
-
             <h3>Orders</h3>
-
-            <p>
-                Manage orders and resolve delivery issues quickly.
-            </p>
-
+            <p>Manage orders and resolve delivery issues quickly.</p>
         </div>
 
         <div class="card">
-
             <div class="icon-circle">
                 <i class="fa-solid fa-money-bill-wave"></i>
             </div>
-
             <h3>Refunds</h3>
-
-            <p>
-                Get instant help with refund requests and policies.
-            </p>
-
+            <p>Get instant help with refund requests and policies.</p>
         </div>
 
         <div class="card">
-
             <div class="icon-circle">
                 <i class="fa-solid fa-credit-card"></i>
             </div>
-
             <h3>Payments</h3>
-
-            <p>
-                Resolve payment failures and transaction issues.
-            </p>
-
+            <p>Resolve payment failures and transaction issues.</p>
         </div>
 
     </section>
@@ -230,11 +183,9 @@
         <h2>Why Choose Our AI Assistant?</h2>
 
         <p>
-
             Powered by Retrieval-Augmented Generation (RAG), semantic search,
             FAISS vector database, Groq LLMs, and secure authentication,
             delivering fast, intelligent, and reliable customer support.
-
         </p>
 
     </section>
@@ -242,9 +193,7 @@
     <!-- ================= FLOATING CHAT BUTTON ================= -->
 
     <button id="chatButton" class="chat-button">
-
         <i class="fa-solid fa-comments"></i>
-
     </button>
 
     <!-- ================= CHAT POPUP ================= -->
@@ -254,17 +203,12 @@
         <div class="chat-header">
 
             <div class="chat-title">
-
                 <i class="fa-solid fa-robot"></i>
-
                 <span>AI Assistant</span>
-
             </div>
 
             <button id="closeChat">
-
                 <i class="fa-solid fa-xmark"></i>
-
             </button>
 
         </div>
@@ -276,17 +220,11 @@
                 <strong>AI Assistant</strong>
 
                 <p>
-
                     👋 Welcome!
-
                     <br><br>
-
                     I'm your AI Customer Support Assistant.
-
-                    Ask me anything about orders,
-                    shipping, refunds, payments,
-                    returns or account related issues.
-
+                    Ask me anything about orders, shipping, refunds,
+                    payments, returns, or account-related issues.
                 </p>
 
             </div>
@@ -301,9 +239,7 @@
                 placeholder="Type your question...">
 
             <button id="sendBtn">
-
                 <i class="fa-solid fa-paper-plane"></i>
-
             </button>
 
         </div>
@@ -313,17 +249,11 @@
     <!-- ================= FOOTER ================= -->
 
     <footer>
-
         <p>
-
             © 2026 AI Customer Support Assistant |
-            Built with Flask • PostgreSQL • FAISS • Groq LLM
-
+            Powered by Flask, PostgreSQL, FAISS & Groq LLM
         </p>
-
     </footer>
-
-    <!-- JS -->
 
     <script src="js/api.js"></script>
     <script src="js/main.js"></script>
