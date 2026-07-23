@@ -10,21 +10,6 @@ const chatBody = document.getElementById("chatBody");
 // Events
 // ===========================
 
-const token = localStorage.getItem("token");
-
-const user = JSON.parse(localStorage.getItem("user"));
-
-if(
-    !token ||
-    !user
-){
-    window.location.href="login.html";
-}
-
-if(user.role==="admin"){
-    window.location.href="admin.html";
-}
-
 sendBtn.addEventListener("click", sendMessage);
 
 questionInput.addEventListener("keydown", function (e) {
@@ -45,6 +30,19 @@ questionInput.addEventListener("keydown", function (e) {
 // ===========================
 
 async function sendMessage() {
+
+    const token = localStorage.getItem("token");
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (!token || !user) {
+        window.location.href = "login.html";
+        return;
+    }
+
+    if (user.role === "admin") {
+        window.location.href = "admin.html";
+        return;
+    }
 
     const question = questionInput.value.trim();
 
