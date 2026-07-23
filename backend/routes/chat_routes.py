@@ -11,22 +11,95 @@ from backend.database.db import db
 chat = Blueprint("chat", __name__)
 
 
-
 @chat.route("/ask", methods=["POST"])
 @token_required
 def ask():
 
-    question = request.json["question"]
+    question = request.json.get("question", "").strip()
+    normalized = question.lower()
 
-    embedding = create_query_embedding(question)
+    # ==========================
+    # Greeting Handling
+    # ==========================
 
-    chunks = search(embedding)
+    greetings = {
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening"
+    }
 
-    context = "\n\n".join(chunks)
+    thanks = {
+        "thanks",
+        "thank you",
+        "thx",
+        "thankyou"
+    }
 
-    result = ask_llm(context, question)
+    goodbyes = {
+        "bye",
+        "goodbye",
+        "see you",
+        "see ya"
+    }
 
-    # Save conversation
+    if normalized in greetings:
+
+        result = {
+            "category": "General Information",
+            "priority": "Low",
+            "confidence": 100,
+            "answer": (
+                "👋 Hello!\n\n"
+                "Welcome to ShopEase Customer Support.\n\n"
+                "I can help you with:\n"
+                "• Orders\n"
+                "• Shipping\n"
+                "• Refunds\n"
+                "• Returns\n"
+                "• Payments\n"
+                "• Account-related issues\n\n"
+                "How can I assist you today?"
+            )
+        }
+
+    elif normalized in thanks:
+
+        result = {
+            "category": "General Information",
+            "priority": "Low",
+            "confidence": 100,
+            "answer": "You're welcome! 😊 I'm happy to help. If you have any other ShopEase-related questions, just ask."
+        }
+
+    elif normalized in goodbyes:
+
+        result = {
+            "category": "General Information",
+            "priority": "Low",
+            "confidence": 100,
+            "answer": "👋 Thank you for contacting ShopEase Customer Support. Have a great day!"
+        }
+
+    else:
+        # ==========================
+        # RAG Pipeline
+        # ==========================
+
+        embedding = create_query_embedding(question)
+
+        chunks = search(embedding)
+
+        context = "\n\n".join(chunks)
+
+        result = ask_llm(context, question)
+
+    # ==========================
+    # Save Conversation
+    # ==========================
+
     history = ChatHistory(
         user_id=request.user["id"],
         question=question,
