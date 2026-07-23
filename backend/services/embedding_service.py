@@ -1,5 +1,5 @@
 import requests
-from config import Config
+from backend.config import Config
 
 JINA_API_KEY = Config.JINA_API_KEY
 URL = "https://api.jina.ai/v1/embeddings"

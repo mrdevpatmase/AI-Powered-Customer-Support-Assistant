@@ -1,9 +1,9 @@
 from flask import Blueprint, jsonify
 from sqlalchemy import func
 
-from database.db import db
-from models.chat_history import ChatHistory
-from models.user import User
+from backend.database.db import db
+from backend.models.chat_history import ChatHistory
+from backend.models.user import User
 
 admin = Blueprint("admin", __name__)
 

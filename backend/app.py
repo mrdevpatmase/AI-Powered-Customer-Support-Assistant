@@ -6,12 +6,12 @@ from flask import Flask, send_from_directory
 from flask_cors import CORS
 
 from backend.config import Config
-from database.db import db
+from backend.database.db import db
 
-from routes.auth_routes import auth
-from routes.document_routes import document
-from routes.chat_routes import chat
-from routes.admin_routes import admin
+from backend.routes.auth_routes import auth
+from backend.routes.document_routes import document
+from backend.routes.chat_routes import chat
+from backend.routes.admin_routes import admin
 
 
 # ======================================
@@ -47,9 +47,9 @@ ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 db.init_app(app)
 
 with app.app_context():
-    from models.user import User
-    from models.document import Document
-    from models.chat_history import ChatHistory
+    from backend.models.user import User
+    from backend.models.document import Document
+    from backend.models.chat_history import ChatHistory
 
     db.create_all()
 

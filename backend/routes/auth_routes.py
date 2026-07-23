@@ -1,12 +1,12 @@
 import os
 
 from flask import Blueprint, request, jsonify
-from database.db import db
-from models.user import User
+from backend.database.db import db
+from backend.models.user import User
 import bcrypt
 import jwt
 from datetime import datetime, timedelta
-from config import Config
+from backend.config import Config
 from middleware.auth_middleware import token_required
 
 auth = Blueprint("auth", __name__)

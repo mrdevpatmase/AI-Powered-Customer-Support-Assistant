@@ -1,12 +1,12 @@
 from flask import Blueprint, request, jsonify
 
 from middleware.auth_middleware import token_required
-from services.embedding_service import create_query_embedding
-from services.search_service import search
-from services.llm_service import ask_llm
+from backend.services.embedding_service import create_query_embedding
+from backend.services.search_service import search
+from backend.services.llm_service import ask_llm
 
-from models.chat_history import ChatHistory
-from database.db import db
+from backend.models.chat_history import ChatHistory
+from backend.database.db import db
 
 chat = Blueprint("chat", __name__)
 

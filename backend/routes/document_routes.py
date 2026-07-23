@@ -1,13 +1,13 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
 from middleware.auth_middleware import token_required
-from database.db import db
-from models.document import Document
+from backend.database.db import db
+from backend.models.document import Document
 import os
-from services.pdf_service import extract_text
-from services.chunker import chunk_text
-from services.embedding_service import create_embeddings
-from services.vector_service import save_embeddings
+from backend.services.pdf_service import extract_text
+from backend.services.chunker import chunk_text
+from backend.services.embedding_service import create_embeddings
+from backend.services.vector_service import save_embeddings
 
 
 document = Blueprint("document", __name__)
