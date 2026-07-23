@@ -18,7 +18,7 @@ function logout(){
     window.location.href="admin-login.html";
 
 }
-const API_URL = "http://127.0.0.1:5000/api";
+const API_URL = "/api";
 
 
 if (!token) {
@@ -221,19 +221,5 @@ function filterHistory() {
     });
 
     renderTable(filtered);
-
-}
-
-// ===============================
-// Logout
-// ===============================
-
-function logout() {
-
-    localStorage.removeItem("token");
-
-    localStorage.removeItem("user");
-
-    window.location.href = "admin-login.html";
 
 }
