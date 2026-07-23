@@ -125,22 +125,21 @@ function addAIMessage(data) {
 
     div.className = "ai-response";
 
-    div.innerHTML = `
+    const formattedAnswer = data.answer.replace(/\n/g, "<br>");
 
+    div.innerHTML = `
         <div class="badge category">
             📦 ${data.category}
         </div>
 
         <div class="answer">
-            ${data.answer}
+            ${formattedAnswer}
         </div>
-
     `;
 
     chatBody.appendChild(div);
 
     scrollBottom();
-
 }
 
 // ===========================
