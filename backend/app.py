@@ -2,11 +2,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
-
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 
-from config import Config
+from backend.config import Config
 from database.db import db
 
 from routes.auth_routes import auth
