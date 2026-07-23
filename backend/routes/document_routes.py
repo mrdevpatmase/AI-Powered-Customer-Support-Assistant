@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
-from middleware.auth_middleware import token_required
+from backend.middleware.auth_middleware import token_required
 from backend.database.db import db
 from backend.models.document import Document
 import os

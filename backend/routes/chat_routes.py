@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 
-from middleware.auth_middleware import token_required
+from backend.middleware.auth_middleware import token_required
 from backend.services.embedding_service import create_query_embedding
 from backend.services.search_service import search
 from backend.services.llm_service import ask_llm

@@ -7,7 +7,7 @@ import bcrypt
 import jwt
 from datetime import datetime, timedelta
 from backend.config import Config
-from middleware.auth_middleware import token_required
+from backend.middleware.auth_middleware import token_required
 
 auth = Blueprint("auth", __name__)
 
